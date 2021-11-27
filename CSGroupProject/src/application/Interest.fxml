@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterestController">
+   <center>
+      <TreeView fx:id="interestList" prefHeight="295.0" prefWidth="479.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="5.0" right="10.0" />
+         </BorderPane.margin>
+      </TreeView>
+   </center>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UTSA Club Finder">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Region prefHeight="100.0" prefWidth="736.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please select your INTEREST:" underline="true">
+                     <font>
+                        <Font name="Engravers MT" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+            <Region prefHeight="100.0" prefWidth="735.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text fx:id="userText" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, SAMPLE NAME" underline="true">
+                     <font>
+                        <Font name="Microsoft YaHei" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="5.0" top="2.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#switchToMajor" prefHeight="25.0" prefWidth="147.0" text="Go Back">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Region prefHeight="66.0" prefWidth="33.0" />
+                        <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToMain" prefHeight="25.0" prefWidth="147.0" text="Log Out">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                     <VBox.margin>
+                        <Insets left="2.0" right="2.0" top="4.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+</BorderPane>
