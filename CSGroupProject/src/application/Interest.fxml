@@ -18,6 +18,11 @@
                         <Font name="System Bold" size="22.0" />
                      </font>
                   </Text>
+                  <Label fx:id="majorText" prefHeight="46.0" prefWidth="174.0" text="Major:">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
                   <Region prefHeight="100.0" prefWidth="736.0" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sort BY:" underline="true">
                      <font>
@@ -65,7 +70,7 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Sort by Major">
+                  <Button fx:id="sortMajor" mnemonicParsing="false" onAction="#updateDataByMajor" prefHeight="25.0" prefWidth="345.0" text="Sort by Major">
                      <VBox.margin>
                         <Insets left="2.0" right="2.0" top="4.0" />
                      </VBox.margin>
@@ -235,6 +240,37 @@
       </HBox>
    </left>
    <center>
-      <VBox fx:id="vbox" BorderPane.alignment="CENTER" />
+      <VBox fx:id="vbox" prefHeight="66.0" prefWidth="969.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" onMouseClicked="#displayClub" prefHeight="466.0" prefWidth="969.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="linkColumn" prefWidth="75.0" text="Link" />
+                  <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="schoolColumn" prefWidth="75.0" text=" School" />
+              </columns>
+            </TableView>
+         </children></VBox>
    </center>
+   <bottom>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="selectedClub" prefHeight="83.0" prefWidth="779.0" text="Selected Club:">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label prefHeight="24.0" prefWidth="141.0" text="Link:">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="linkBox" onAction="#openWebsite" onMouseClicked="#openWebsite" prefHeight="59.0" prefWidth="1169.0" text="Hyperlink">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </VBox>
+   </bottom>
 </BorderPane>

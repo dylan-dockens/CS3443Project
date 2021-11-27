@@ -4,15 +4,15 @@ public class Club {
 	private String name;
 	private String link;
 	private String email;
-	private String category;
+	//private String category;
 	private String school;
 
-	public Club(String name, String link, String email, String category, String school) {
+	public Club(String name, String link, String email, String school) {
 		super();
 		this.name = name;
 		this.link = link;
 		this.email = email;
-		this.category = category;
+		//this.category = category;
 		this.school = school;
 	}
 	public String getName() {
@@ -33,12 +33,12 @@ public class Club {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getCategory() {
+	/*public String getCategory() {
 		return category;
 	}
 	public void setCategory(String category) {
 		this.category = category;
-	}
+	}*/
 	public String getSchool() {
 		return school;
 	}
@@ -47,7 +47,7 @@ public class Club {
 	}
 	@Override
 	public String toString() {
-		return name + " " + link + " " + email + " " + category + " " + school + "\n";
+		return name + " " + link + " " + email + " " + school + "\n";
 	}
 	
 	

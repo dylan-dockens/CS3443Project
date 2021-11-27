@@ -54,11 +54,13 @@ public class MajorController implements Initializable{
 	 * Methods have been named accordingly.
 	 */
 	public void switchToInterest(ActionEvent event) throws IOException {
+		Button btn = (Button) event.getSource();
+		String id = btn.getText();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("Interest.fxml"));
 		root = loader.load();
 		
 		InterestController InterestView = loader.getController();
-		InterestView.displayName(userText.getText());
+		InterestView.displayName(userText.getText(), id);
 		//Parent root = FXMLLoader.load(getClass().getResource("Interest.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
