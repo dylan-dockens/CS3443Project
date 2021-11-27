@@ -228,7 +228,6 @@ public class InterestController implements Initializable{
 			tempClub = selectedRow.get(0);
 			selectedClub.setText("Selected Club: " + tempClub.getName() + "   Email: " + tempClub.getEmail());
 			linkBox.setText(tempClub.getLink());
-			System.out.println(tempClub);
 			//selectedClub.setText("Selected Club" + selectedRow);
 			//System.out.println(selectedRow);
 			
