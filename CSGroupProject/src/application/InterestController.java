@@ -1,9 +1,15 @@
 package application;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,8 +18,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TreeView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -23,16 +34,30 @@ public class InterestController implements Initializable{
 		private Stage stage;
 		private Scene scene;
 		private Parent root;
-		
+		ArrayList<Club> clubs = new ArrayList<>();
 		//FXML variables to reflect changes in scenebuilder
+		
 		@FXML
 		Button logOutButton;
 		@FXML
 		Button backButton;
+		@FXML
+		TableView<Club> table;
+		@FXML
+		TableColumn<Club, String> nameColumn = new TableColumn<>("Name");
+		@FXML
+		TableColumn<Club, String> linkColumn = new TableColumn<>("Link");
+		@FXML
+		TableColumn<Club, String> emailColumn = new TableColumn<>("Email");
+		@FXML
+		TableColumn<Club, String> categoryColumn = new TableColumn<>("Category");
+		@FXML
+		TableColumn<Club, String> schoolColumn = new TableColumn<>("School");
 		
 		@FXML
-		TreeView interestList;
-		
+		ListView<String> list = new ListView<String>();
+		@FXML
+		VBox vbox = new VBox();
 		@FXML
 		Text userText;
 		
@@ -54,13 +79,89 @@ public class InterestController implements Initializable{
 			stage.setScene(scene);
 			stage.show();
 		}
+		public void displayName(String user) {
+			userText.setText(user);
+		}
 		
 		/**
 		 * This method is called when Major.fxml is shown.
 		 * Nothing to pass in currently as it is a demo.
 		 * Once we have a lengthy csv or something we will pass the data through here to initialize the list of majors.
 		 */
+		
+		public ArrayList<Club> loadData(String type) {
+			clubs.removeAll(clubs);
+			String tempName = "";
+			String tempLink = "";
+			String tempEmail = "";
+			String tempCategory = "";
+			String tempSchool = "";
+			String text = "";
+			String[] items = new String[6];
+			int x = 0;
+			FileReader readFile;
+			try {
+				readFile = new FileReader("clubs.csv");
+				BufferedReader buff = new BufferedReader(readFile);
+				while((text = buff.readLine()) != null) {
+					items = text.split(",");
+					tempName = items[0];
+					tempLink = items[1];
+					tempEmail = items[2];
+					tempCategory = items[3];
+					tempSchool = items[4];
+					Club tempClub = new Club(tempName, tempLink, tempEmail, tempCategory, tempSchool);
+					if(type.equals("any")) {
+					clubs.add(tempClub);
+					}
+					if(!type.equals("any")) {
+						if(type.equals(tempClub.getCategory())) {
+							clubs.add(tempClub);
+						}
+					}
+				}
+				
+				
+				buff.close();
+				} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				}
+			return clubs;
+		}
+		
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
+			ArrayList<Club> clubList = new ArrayList<>();
+			clubList = loadData("any");
+			nameColumn.setMinWidth(200);
+			linkColumn.setMinWidth(500);
+			emailColumn.setMinWidth(200);
+			categoryColumn.setMinWidth(200);
+			schoolColumn.setMinWidth(200);
+			nameColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("name"));
+			linkColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("link"));
+			emailColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("email"));
+			categoryColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("category"));
+			schoolColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("school"));
+			table = new TableView<Club>();
+			table.setItems(getClubs(clubList));
+			table.getColumns().addAll(nameColumn, linkColumn, emailColumn, categoryColumn, schoolColumn);
+			vbox.getChildren().addAll(table);
+			
+			}
+		
+		
+		public void updateData(ActionEvent event) {
+			
 		}
+		
+		public ObservableList<Club> getClubs(ArrayList<Club> clubs){
+			ObservableList<Club> clubList = FXCollections.observableArrayList();
+			for(Club temp: clubs) {
+				clubList.add(temp);
+			}
+			return clubList;
+		}
+		
 }

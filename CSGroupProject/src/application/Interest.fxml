@@ -7,16 +7,9 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterestController">
-   <center>
-      <TreeView fx:id="interestList" prefHeight="295.0" prefWidth="479.0" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="10.0" left="5.0" right="10.0" />
-         </BorderPane.margin>
-      </TreeView>
-   </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterestController">
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox BorderPane.alignment="CENTER">
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
@@ -26,7 +19,7 @@
                      </font>
                   </Text>
                   <Region prefHeight="100.0" prefWidth="736.0" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please select your INTEREST:" underline="true">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sort BY:" underline="true">
                      <font>
                         <Font name="Engravers MT" size="24.0" />
                      </font>
@@ -72,12 +65,12 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Sort by Major">
                      <VBox.margin>
                         <Insets left="2.0" right="2.0" top="4.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Math">
                      <VBox.margin>
                         <Insets left="2.0" right="2.0" top="4.0" />
                      </VBox.margin>
@@ -156,12 +149,12 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Music">
                      <VBox.margin>
                         <Insets left="2.0" right="2.0" top="4.0" />
                      </VBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Video Games">
                      <VBox.margin>
                         <Insets left="2.0" right="2.0" top="4.0" />
                      </VBox.margin>
@@ -241,4 +234,7 @@
          </children>
       </HBox>
    </left>
+   <center>
+      <VBox fx:id="vbox" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>

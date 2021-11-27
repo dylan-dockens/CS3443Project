@@ -33,7 +33,12 @@ public class MainController {
 		b = Pattern.matches("[a-zA-z]{3}[1-9]{3}", tfield.getText());
 		if (b) {
 			usr = tfield.getText();
-			root = FXMLLoader.load(getClass().getResource("Major.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Major.fxml"));
+			root = loader.load();
+			
+			MajorController majorView = loader.getController();
+			majorView.displayName(usr);
+			//root = FXMLLoader.load(getClass().getResource("Major.fxml"));
 			stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
