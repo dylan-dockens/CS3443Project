@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.shape.*?>
@@ -10,107 +11,118 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MajorController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #cfe2f3ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MajorController">
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="150.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UTSA Club Finder">
-                     <font>
-                        <Font name="System Bold" size="22.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="3.0" />
-                     </VBox.margin>
-                  </Text>
-                  <Region prefHeight="200.0" prefWidth="200.0" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please select your major:" underline="true">
-                     <font>
-                        <Font name="Engravers MT" size="24.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="5.0" />
-                     </VBox.margin>
-                  </Text>
-               </children>
-            </VBox>
-            <Region prefHeight="100.0" prefWidth="735.0" />
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Text fx:id="userText" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, SAMPLE NAME" underline="true">
-                     <font>
-                        <Font name="Microsoft YaHei" size="24.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets right="5.0" top="2.0" />
-                     </VBox.margin>
-                  </Text>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Region prefHeight="200.0" prefWidth="200.0" />
-                        <Button fx:id="logOutButton" maxHeight="50.0" maxWidth="200.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="50.0" prefWidth="200.0" text="Log Out">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
+            <ImageView fitHeight="150.0" fitWidth="1000.0">
+               <image>
+                  <Image url="@../../UTSA%20Club%20Finder.jpg" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
    </top>
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="50.0" prefWidth="876.0" />
-            <Button fx:id="scienceButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="63.0" prefWidth="1202.0" text="Science">
+            <Region prefHeight="19.0" prefWidth="563.0" />
+            <Button fx:id="scienceButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="63.0" prefWidth="1202.0" style="-fx-background-color: white;" text="Science">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Italic" size="25.0" />
                </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+               </effect>
             </Button>
-            <Region prefHeight="50.0" prefWidth="876.0" />
-            <Button fx:id="engineerButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="65.0" prefWidth="1237.0" text="Engineering">
+            <Region prefHeight="20.0" prefWidth="876.0" />
+            <Button fx:id="engineerButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="65.0" prefWidth="1237.0" style="-fx-background-color: white;" text="Engineering">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Italic" size="25.0" />
                </font>
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.75" />
+               </effect>
             </Button>
-            <Region prefHeight="50.0" prefWidth="876.0" />
-            <Button fx:id="liberalButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="67.0" prefWidth="1177.0" text="Liberal &amp; Fine Arts">
+            <Region prefHeight="20.0" prefWidth="876.0" />
+            <Button fx:id="liberalButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="67.0" prefWidth="1177.0" style="-fx-background-color: white;" text="Liberal &amp; Fine Arts">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Italic" size="25.0" />
                </font>
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.75" />
+               </effect>
             </Button>
-            <Region prefHeight="50.0" prefWidth="876.0" />
-            <Button fx:id="businessButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="69.0" prefWidth="1117.0" text="Business">
+            <Region prefHeight="20.0" prefWidth="876.0" />
+            <Button fx:id="businessButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="69.0" prefWidth="1117.0" style="-fx-background-color: white;" text="Business">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Italic" size="25.0" />
                </font>
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.75" />
+               </effect>
             </Button>
-            <Region prefHeight="50.0" prefWidth="876.0" />
-            <Button fx:id="educationButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="70.0" prefWidth="1154.0" text="Education">
+            <Region prefHeight="20.0" prefWidth="876.0" />
+            <Button fx:id="educationButton" mnemonicParsing="false" onAction="#switchToInterest" prefHeight="70.0" prefWidth="1154.0" style="-fx-background-color: white;" text="Education">
                <VBox.margin>
                   <Insets left="10.0" right="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Italic" size="25.0" />
                </font>
+               <effect>
+                  <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.75" />
+               </effect>
             </Button>
-            <Region prefHeight="50.0" prefWidth="200.0" />
          </children>
       </VBox>
    </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="userText" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, SAMPLE NAME!" textAlignment="CENTER" underline="true" wrappingWidth="436.73046875">
+               <font>
+                  <Font name="Elephant" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Text>
+            <ImageView fitHeight="360.0" fitWidth="450.0">
+               <image>
+                  <Image url="@../../ClubPicture.jpg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="2.0" right="-2.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="logOutButton" alignment="CENTER" maxHeight="50.0" maxWidth="799.0" minHeight="40.0" minWidth="27.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="40.0" prefWidth="205.0" style="-fx-background-color: black;" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="350.0" />
+               </VBox.margin>
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+         </children>
+      </VBox>
+   </left>
 </BorderPane>

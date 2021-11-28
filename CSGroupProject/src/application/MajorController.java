@@ -40,9 +40,6 @@ public class MajorController implements Initializable{
 	Button educationButton;
 	
 	@FXML
-	TreeView majorList;
-	
-	@FXML
 	Text userText;
 	
 	@FXML
@@ -86,5 +83,6 @@ public class MajorController implements Initializable{
 	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
 	}
 }

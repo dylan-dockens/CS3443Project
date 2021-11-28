@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -7,254 +9,31 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterestController">
-   <top>
-      <HBox BorderPane.alignment="CENTER">
-         <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UTSA Club Finder">
-                     <font>
-                        <Font name="System Bold" size="22.0" />
-                     </font>
-                  </Text>
-                  <Label fx:id="majorText" prefHeight="46.0" prefWidth="174.0" text="Major:">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Label>
-                  <Region prefHeight="100.0" prefWidth="736.0" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sort BY:" underline="true">
-                     <font>
-                        <Font name="Engravers MT" size="24.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <Region prefHeight="100.0" prefWidth="735.0" />
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Text fx:id="userText" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, SAMPLE NAME" underline="true">
-                     <font>
-                        <Font name="Microsoft YaHei" size="24.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets right="5.0" top="2.0" />
-                     </VBox.margin>
-                  </Text>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#switchToMajor" prefHeight="25.0" prefWidth="147.0" text="Go Back">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Button>
-                        <Region prefHeight="66.0" prefWidth="33.0" />
-                        <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToMain" prefHeight="25.0" prefWidth="147.0" text="Log Out">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                           <HBox.margin>
-                              <Insets right="10.0" />
-                           </HBox.margin>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </top>
-   <left>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Button fx:id="sortMajor" mnemonicParsing="false" onAction="#updateDataByMajor" prefHeight="25.0" prefWidth="345.0" text="Sort by Major">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Math">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-               </children>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Music">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Video Games">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="345.0" text="Button">
-                     <VBox.margin>
-                        <Insets left="2.0" right="2.0" top="4.0" />
-                     </VBox.margin>
-                  </Button>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </left>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1500.0" style="-fx-background-color: #cfe2f3ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterestController">
    <center>
       <VBox fx:id="vbox" prefHeight="66.0" prefWidth="969.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="table" onMouseClicked="#displayClub" prefHeight="466.0" prefWidth="969.0">
+            <TableView fx:id="table" onMouseClicked="#displayClub" prefHeight="500.0" prefWidth="1303.0">
               <columns>
                 <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
                 <TableColumn fx:id="linkColumn" prefWidth="75.0" text="Link" />
                   <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
                   <TableColumn fx:id="schoolColumn" prefWidth="75.0" text=" School" />
               </columns>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
             </TableView>
          </children></VBox>
    </center>
    <bottom>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
+            <Label fx:id="majorText" text="Major: ">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
             <Label fx:id="selectedClub" prefHeight="83.0" prefWidth="779.0" text="Selected Club:">
                <font>
                   <Font size="23.0" />
@@ -273,4 +52,206 @@
          </children>
       </VBox>
    </bottom>
+   <top>
+      <VBox prefHeight="176.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="74.0" prefWidth="1500.0">
+               <children>
+                  <ImageView fitHeight="74.0" fitWidth="1193.0">
+                     <image>
+                        <Image url="@../../InterestsClubFinderLogo.jpg" />
+                     </image>
+                  </ImageView>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text fx:id="userText" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, SAMPLE NAME" underline="true">
+                           <font>
+                              <Font name="Microsoft YaHei" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="5.0" top="2.0" />
+                           </VBox.margin>
+                        </Text>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="backButton" mnemonicParsing="false" onAction="#switchToMajor" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: black;" text="Go Back" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#switchToMain" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: black;" text="Log Out" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" top="2.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sort clubs by:" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="22.0" top="7.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Region prefHeight="40.0" prefWidth="1111.0" HBox.hgrow="ALWAYS" />
+                  <Button layoutX="3.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="227.0" style="-fx-background-color: white;" text="Display All Clubs">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets bottom="3.0" right="5.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="74.0" prefWidth="1183.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="250.0">
+                     <children>
+                        <Button fx:id="sortMajor" mnemonicParsing="false" onAction="#updateDataByMajor" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Sort by Major">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Women-based">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="250.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Sports">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Cybersecurity">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="250.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Cultural">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Environmental">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="250.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Health">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Wellbeing">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="250.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Military">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Political">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="250.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Robotics">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="47.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="376.0" style="-fx-background-color: white;" text="Religious">
+                           <VBox.margin>
+                              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                           </VBox.margin>
+                           <effect>
+                              <InnerShadow blurType="ONE_PASS_BOX" color="RED" height="20.0" radius="9.5" width="20.0" />
+                           </effect>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
 </BorderPane>

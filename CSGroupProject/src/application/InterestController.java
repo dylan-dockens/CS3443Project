@@ -217,7 +217,6 @@ public class InterestController implements Initializable{
 			table.setItems(getClubs(clubList));
 			//table.getColumns().addAll(nameColumn, linkColumn, emailColumn, schoolColumn);
 			//vbox.getChildren().addAll(table);
-			
 		}
 		
 		public void displayClub(){
@@ -230,7 +229,6 @@ public class InterestController implements Initializable{
 			linkBox.setText(tempClub.getLink());
 			//selectedClub.setText("Selected Club" + selectedRow);
 			//System.out.println(selectedRow);
-			
 		}
 		
 		public void openWebsite(ActionEvent event) throws IOException, URISyntaxException {
