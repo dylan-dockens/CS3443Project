@@ -41,7 +41,6 @@ public class MajorController implements Initializable{
 	
 	@FXML
 	Text userText;
-	
 	@FXML
 	TextField searchField;
 	
@@ -66,7 +65,7 @@ public class MajorController implements Initializable{
 	}
 	
 	public void displayName(String user) {
-		userText.setText("Hello, " + user);
+		userText.setText("Welcome, " + user + "!");
 	}
 	public void switchToMain(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));

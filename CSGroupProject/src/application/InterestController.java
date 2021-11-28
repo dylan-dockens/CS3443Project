@@ -76,7 +76,33 @@ public class InterestController implements Initializable{
 		Label selectedClub;
 		@FXML
 		Hyperlink linkBox;
-		
+		@FXML
+		Label selectedEmail;
+		String majorInfo;
+		@FXML
+		Button women;
+		@FXML
+		Button sports;
+		@FXML
+		Button cybersecurity;
+		@FXML
+		Button cultural;
+		@FXML
+		Button evironmental;
+		@FXML
+		Button health;
+		@FXML
+		Button wellbeing;
+		@FXML
+		Button military;
+		@FXML
+		Button political;
+		@FXML
+		Button robotics;
+		@FXML
+		Button religious;
+		@FXML
+		Button displayAll;
 		/**
 		 * When pressed, the scene will switch depending on which one.
 		 * Methods have been named accordingly.
@@ -97,70 +123,22 @@ public class InterestController implements Initializable{
 		}
 		public void displayName(String user, String major) {
 			userText.setText(user);
-			majorText.setText(major);
+			majorText.setText("School: " + major);
+			majorInfo = major;
 		}
 		
 		
 		
 		/**
 		 * This method is called when Major.fxml is shown.
-		 * Nothing to pass in currently as it is a demo.
-		 * Once we have a lengthy csv or something we will pass the data through here to initialize the list of majors.
-		 */
-		
-		public ArrayList<Club> loadData(String type) {
-			clubs.removeAll(clubs);
-			String tempName = "";
-			String tempLink = "";
-			String tempEmail = "";
-			String tempCategory = "";
-			String tempSchool = "";
-			String text = "";
-			String[] items = new String[6];
-			int x = 0;
-			FileReader readFile;
-			try {
-				readFile = new FileReader("clubs.csv");
-				BufferedReader buff = new BufferedReader(readFile);
-				while((text = buff.readLine()) != null) {
-					items = text.split(",");
-					tempName = items[0];
-					tempLink = items[1];
-					tempEmail = items[2];
-					tempSchool = items[3];
-					//tempSchool = items[4];
-					Club tempClub = new Club(tempName, tempLink, tempEmail, tempSchool);
-					if(type.equals("all")) {
-						clubs.add(tempClub);
-					}
-					if(type.equals("Science") || type.equals("Business") || type.equals("Engineering") || type.equals("Liberal & Fine Arts") || type.equals("Education")) {
-						if(type.equals(tempClub.getSchool())) {
-							clubs.add(tempClub);
-						}
-					}
-					if(type.equals("any")) {
-					clubs.add(tempClub);
-					}
-					/*if(!type.equals("any")) {
-						if(type.equals(tempClub.getCategory()) {
-							clubs.add(tempClub);
-						}
-					}*/
-				}
-				
-				
-				buff.close();
-				} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				}
-			return clubs;
-		}
-		
+		 * puts the list of all clubs into a tableview and displays it
+		*/
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
+			linkBox.setText("");
+			Club tempClub = new Club("", "", "", "", "");
 			ArrayList<Club> clubList = new ArrayList<>();
-			clubList = loadData("any");
+			clubList = tempClub.loadData("Display All Clubs");
 			nameColumn.setMinWidth(200);
 			linkColumn.setMinWidth(500);
 			emailColumn.setMinWidth(200);
@@ -169,20 +147,21 @@ public class InterestController implements Initializable{
 			nameColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("name"));
 			linkColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("link"));
 			emailColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("email"));
-			categoryColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("category"));
+			categoryColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("school"));
 			schoolColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("school"));
 			table.setItems(getClubs(clubList));
 			//table.getColumns().addAll(nameColumn, linkColumn, emailColumn, schoolColumn);
 			//vbox.getChildren().addAll(table);
 			
 			}
-		
+		//updates the data based on the school chosen
 		public void updateDataByMajor(ActionEvent event) {
+			Club tempClub = new Club("", "", "", "", "");
 			table.getItems().clear();
 			Button btn = (Button) event.getSource();
 			String id = btn.getText();
 			ArrayList<Club> clubList = new ArrayList<>();
-			clubList = loadData(majorText.getText());
+			clubList = tempClub.loadData(majorInfo);
 			nameColumn.setMinWidth(200);
 			linkColumn.setMinWidth(500);
 			emailColumn.setMinWidth(200);
@@ -193,50 +172,49 @@ public class InterestController implements Initializable{
 			emailColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("email"));
 			categoryColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("category"));
 			schoolColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("school"));
-			//table = new TableView<Club>();
 			table.setItems(getClubs(clubList));
-		}
-		public void updateData(ActionEvent event) {
-			//vbox.getChildren().clear();
-			table.getItems().clear();
-			Button btn = (Button) event.getSource();
-			String id = btn.getText();
-			ArrayList<Club> clubList = new ArrayList<>();
-			clubList = loadData("Business");
-			nameColumn.setMinWidth(200);
-			linkColumn.setMinWidth(500);
-			emailColumn.setMinWidth(200);
-			categoryColumn.setMinWidth(200);
-			schoolColumn.setMinWidth(200);
-			nameColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("name"));
-			linkColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("link"));
-			emailColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("email"));
-			categoryColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("category"));
-			schoolColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("school"));
-			table = new TableView<Club>();
-			table.setItems(getClubs(clubList));
-			//table.getColumns().addAll(nameColumn, linkColumn, emailColumn, schoolColumn);
-			//vbox.getChildren().addAll(table);
 		}
 		
+		//updates the data depending on which button is pressed in the "Sort by: "
+		public void updateData(ActionEvent event) {
+			Club tempClub = new Club("", "", "", "", "");
+			table.getItems().clear();
+			Button btn = (Button) event.getSource();
+			String id = btn.getText();
+			ArrayList<Club> clubList = new ArrayList<>();
+			clubList = tempClub.loadData(id);
+			nameColumn.setMinWidth(200);
+			linkColumn.setMinWidth(500);
+			emailColumn.setMinWidth(200);
+			categoryColumn.setMinWidth(200);
+			schoolColumn.setMinWidth(200);
+			nameColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("name"));
+			linkColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("link"));
+			emailColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("email"));
+			categoryColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("category"));
+			schoolColumn.setCellValueFactory(new PropertyValueFactory<Club, String>("school"));
+			table.setItems(getClubs(clubList));
+		}
+		
+		//displays the currently selected club as well the email and link to the webpage
 		public void displayClub(){
-			Club tempClub = new Club("", "", "", "");
+			Club tempClub = new Club("", "", "", "", "");
 			TableViewSelectionModel<Club> selectionModel = table.getSelectionModel();
 			ObservableList<Club> selectedRow = selectionModel.getSelectedItems();
-			//System.out.println(electedRow.toString());
 			tempClub = selectedRow.get(0);
-			selectedClub.setText("Selected Club: " + tempClub.getName() + "   Email: " + tempClub.getEmail());
+			selectedClub.setText("Selected Club: " + tempClub.getName());
+			selectedEmail.setText("Email: " + tempClub.getEmail());
 			linkBox.setText(tempClub.getLink());
-			//selectedClub.setText("Selected Club" + selectedRow);
-			//System.out.println(selectedRow);
 		}
 		
+		//opens the webpage of the link when it is clicked
 		public void openWebsite(ActionEvent event) throws IOException, URISyntaxException {
 			Hyperlink tempLink = (Hyperlink) event.getSource();
 			tempLink.getText();
 			Desktop d = Desktop.getDesktop();
 			d.browse(new URI(tempLink.getText()));
 			}
+		//turns an arrayList into an observable list so that it can be used in the table view
 		public ObservableList<Club> getClubs(ArrayList<Club> clubs){
 			ObservableList<Club> clubList = FXCollections.observableArrayList();
 			for(Club temp: clubs) {
