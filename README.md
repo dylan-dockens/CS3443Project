@@ -13,11 +13,11 @@ In order to log in to the application, a user name consisting of three letters f
 No current bugs as of the latest version.
 
 Contributors: 
-Dylan Dockens-https://github.com/dylan-dockens
+Dylan Dockens- https://github.com/dylan-dockens
 Alejandro Perez- https://github.com/realgamerhours
-Kris Holmes-https://github.com/krisholmes44 
+Kris Holmes- https://github.com/krisholmes44 
 Isabelle Molinas- https://github.com/isabellemolinas 
-Melody Buezo-
+Melody Buezo- https://github.com/melodybuezo
 
 MIT License
 
