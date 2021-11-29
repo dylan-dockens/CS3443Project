@@ -64,9 +64,6 @@ public class Club {
 			return clubs;
 		}
 		
-		
-		
-	
 	public String getName() {
 		return name;
 	}
@@ -101,6 +98,4 @@ public class Club {
 	public String toString() {
 		return name + " " + link + " " + email + " " + school + " " + category + "\n";
 	}
-	
-	
 }

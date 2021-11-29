@@ -115,7 +115,11 @@ public class InterestController implements Initializable{
 			stage.show();
 		}
 		public void switchToMajor(ActionEvent event) throws IOException {
-			Parent root = FXMLLoader.load(getClass().getResource("Major.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Major.fxml"));
+			root = loader.load();
+			MajorController MajorView = loader.getController();
+			MajorView.displayName(userText.getText().substring(9 ,15));
+			//Parent root = FXMLLoader.load(getClass().getResource("Major.fxml"));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
 			stage.setScene(scene);
@@ -222,5 +226,4 @@ public class InterestController implements Initializable{
 			}
 			return clubList;
 		}
-		
 }

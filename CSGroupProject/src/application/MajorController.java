@@ -18,7 +18,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class MajorController implements Initializable{
+public class MajorController{
 
 	//Initializing variables used for scene switching
 	private Stage stage;
@@ -44,6 +44,11 @@ public class MajorController implements Initializable{
 	@FXML
 	TextField searchField;
 	
+	//This method changes text to the username
+	public void displayName(String user) {
+		userText.setText("Welcome, " + user + "!");
+	}
+	
 	/**
 	 * These methods are called when a certain button is pressed.
 	 * When pressed, the scene will switch depending on which one.
@@ -63,25 +68,11 @@ public class MajorController implements Initializable{
 		stage.setScene(scene);
 		stage.show();
 	}
-	
-	public void displayName(String user) {
-		userText.setText("Welcome, " + user + "!");
-	}
 	public void switchToMain(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-	}
-
-	/**
-	 * This method is called when Major.fxml is shown.
-	 * Nothing to pass in currently as it is a demo.
-	 * Once we have a lengthy csv or something we will pass the data through here to initialize the list of majors.
-	 */
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		
 	}
 }
