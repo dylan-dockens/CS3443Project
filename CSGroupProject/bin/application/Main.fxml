@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #cfe2f3ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" opacity="0.4">
+         <image>
+            <Image url="@../../BirdsUp.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfield" alignment="CENTER" layoutX="115.0" layoutY="265.0" promptText="Enter your abc123">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </TextField>
+      <Button fx:id="continueButton" layoutX="466.0" layoutY="269.0" mnemonicParsing="false" onAction="#checker" prefHeight="42.0" prefWidth="119.0" style="-fx-background-color: #0928f6;" text="Continue" textFill="#f8f8f8">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Label fx:id="err" layoutX="2.0" layoutY="364.0" prefHeight="29.0" prefWidth="700.0" style="-fx-alignment: center;" textFill="#0928f6">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Text layoutX="90.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your abc123 in the box below:" textAlignment="CENTER" underline="true" wrappingWidth="519.13671875">
+         <font>
+            <Font name="Eras Demi ITC" size="23.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="156.0" fitWidth="700.0">
+         <image>
+            <Image url="@../../UTSA%20Club%20Finder.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
