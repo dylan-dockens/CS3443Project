@@ -8,7 +8,7 @@ This project was made using java, as well as javaFX for the GUI components.
 
 To run this project, the eclipse IDE is required, as well as the java JRE 1.8_251, the java JDK 8, and javafx.
 
-Contributors: Dylan Dockens- Alejandro Perez- Kris Holmes- Isabelle Molinas- Melody Buezo-
+Contributors: Dylan Dockens-https://github.com/dylan-dockens Alejandro Perez- Kris Holmes-https://github.com/krisholmes44 Isabelle Molinas- https://github.com/isabellemolinas Melody Buezo-
 
 MIT License
 
