@@ -8,7 +8,16 @@ This project was made using java, as well as javaFX for the GUI components.
 
 To run this project, the eclipse IDE is required, as well as the java JRE 1.8_251, the java JDK 8, and javafx.
 
-Contributors: Dylan Dockens-https://github.com/dylan-dockens Alejandro Perez- Kris Holmes-https://github.com/krisholmes44 Isabelle Molinas- https://github.com/isabellemolinas Melody Buezo-
+In order to log in to the application, a user name consisting of three letters followed by three numbers must be used. (ex. abc123)
+
+No current bugs as of the latest version.
+
+Contributors: 
+Dylan Dockens-https://github.com/dylan-dockens
+Alejandro Perez- https://github.com/realgamerhours
+Kris Holmes-https://github.com/krisholmes44 
+Isabelle Molinas- https://github.com/isabellemolinas 
+Melody Buezo-
 
 MIT License
 
